@@ -24,15 +24,17 @@ class Solution {
 //         }
         
 //         int fromFront = length - n;
-//         curr = head;
+//         ListNode dummyHead = new ListNode(0);
+//         dummyHead.next = head;
+//         curr = dummyHead;
         
-//         for (int i = 1; i < fromFront; i++) {
+//         for (int i = 1; i <= fromFront; i++) {
 //             curr = curr.next;
 //         }
         
 //         curr.next = curr.next.next;
         
-//         return head;
+//         return dummyHead.next;
         
         // better approach
         // have two pointers where 1 from head, 2 is n length apart from 1
