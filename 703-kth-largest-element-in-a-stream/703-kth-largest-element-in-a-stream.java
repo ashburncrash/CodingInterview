@@ -1,12 +1,10 @@
 class KthLargest {
     int k = Integer.MIN_VALUE;
     PriorityQueue<Integer> queue;
-    ArrayList<Integer> backQueue;
 
     public KthLargest(int k, int[] nums) {
         this.k = k;
-        queue = new PriorityQueue<>(); 
-        backQueue = new ArrayList<>();
+        queue = new PriorityQueue<>();
         
         for(int num : nums) {
             add(num);
