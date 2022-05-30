@@ -9,8 +9,13 @@ class Solution {
         // we'll save the str to list in the map
         for (String str : strs) {
             char[] chars = str.toCharArray();
-            Arrays.sort(chars);
-            String sortedStr = String.valueOf(chars);
+            //Arrays.sort(chars);
+            char[] counts = new char[26];
+            for (char c : chars){
+                counts[c - 'a']++;
+            }
+            
+            String sortedStr = String.valueOf(counts);
             
             // this will handle checking the key in the map, etc.
             List<String> anagrams = map.getOrDefault(sortedStr, new ArrayList<String>());
