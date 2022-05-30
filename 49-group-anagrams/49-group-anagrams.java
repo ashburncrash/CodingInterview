@@ -10,12 +10,12 @@ class Solution {
         for (String str : strs) {
             char[] chars = str.toCharArray();
             //Arrays.sort(chars);
-            char[] counts = new char[26];
+            char[] sorted = new char[26];
             for (char c : chars){
-                counts[c - 'a']++;
+                sorted[c - 'a']++;
             }
             
-            String sortedStr = String.valueOf(counts);
+            String sortedStr = String.valueOf(sorted);
             
             // this will handle checking the key in the map, etc.
             List<String> anagrams = map.getOrDefault(sortedStr, new ArrayList<String>());
